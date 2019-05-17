@@ -22,7 +22,7 @@ const $handler = `(channel, data, device = null) => socket.emit("@mode", @protoc
 
 io.on("connection", socket => {
     socket.on("watcher", (watcher, callback) => {
-        
+        !callback || callback("Hello");
     });
 });
 
